@@ -1,0 +1,5 @@
+-D hxtsdgen=0.0.1
+# @install: lix --silent download "gh://github.com/nadako/hxtsdgen#8244c170445c7f763045f2eca18a1b77beab8688" into hxtsdgen/0.0.1/github/8244c170445c7f763045f2eca18a1b77beab8688
+-cp ${HAXE_LIBCACHE}/hxtsdgen/0.0.1/github/8244c170445c7f763045f2eca18a1b77beab8688/src
+--macro hxtsdgen.Generator.use()
+-D use-rtti-doc
