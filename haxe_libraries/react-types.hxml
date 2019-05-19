@@ -1,0 +1,4 @@
+-D react-types=0.9.0
+# @install: lix --silent download "haxelib:/react-types#0.9.0" into react-types/0.9.0/haxelib
+-lib css-types
+-cp ${HAXE_LIBCACHE}/react-types/0.9.0/haxelib/src

@@ -1,11 +1,11 @@
 -cp src/hx
+-lib material-ui
 -lib coconut.react-dom
--lib hxtsdgen
 -lib hxnodejs
 -lib tink_web
 -lib tink_http
 -lib tink_await
 -main client.ClientApp
--js src/ts/client/hx.js
+-js src/ts/client/client.js
 -D  no-deprecation-warnings
--dce full
+#-dce full

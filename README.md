@@ -1,5 +1,8 @@
 ## Learning experiment. Not suitable for production use.
 
+
+
+      <Footer {...this} />
 Almost the same approach as https://github.com/haxe-boilerplate/pwa-ts-haxe-sample but without hxgenjs. Requires classes that will be used from js/ts
 to be @:expose'ed and splits the build.hxml into two in order to generate two haxe js bundles - one for the client and another one for the server (we could
 have kept a single hxml and a single bundle, though, but to keep things more organized and simpler, I found it better to split).

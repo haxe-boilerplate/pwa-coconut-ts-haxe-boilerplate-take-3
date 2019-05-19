@@ -5,7 +5,7 @@ import coconut.data.Model;
 using tink.CoreApi;
 
 class Thing implements Model {
-    @:constant var foo: String = 'bar';
+    @:constant var foo: String = 'Hello from Coconut!';
 //  @:observable var someObsevableField: String = 'Original value';
 //  @:loaded var someFieldLoadedFromTheServer: String = {};
 

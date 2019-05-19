@@ -7,10 +7,11 @@ import client.ui.ThingsView;
 class ClientApp {
   static function main() {
     
-    var things = [new client.data.Thing()];
+    var thing = new client.data.Thing();
 
     coconut.ui.Renderer.mount(
-      cast document.body.appendChild(document.createDivElement()),
-      hxx('<ThingsView things=${things}/>'));
+//      cast document.body.appendChild(document.createDivElement()),
+      document.getElementById('app'),
+      hxx('<ThingsView thing=${thing}/>'));
   }
 }

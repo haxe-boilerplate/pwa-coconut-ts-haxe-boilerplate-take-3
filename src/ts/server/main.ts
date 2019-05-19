@@ -11,11 +11,6 @@ import { isObject } from 'util';
 import * as http from 'http';
 import { Server } from 'net';
 
-import { server } from './hx';
-
-const superServerComponent = new server.SuperServerComponent();
-superServerComponent.saySomething('Hello from Haxe running on nodejs from a js file compiled by tsc!');
-
 console.log(`The App version is ${getVersion()} nice!`);
 
 const app = express();
@@ -26,9 +21,9 @@ app.use('/assets', express.static(path.join(__dirname, '..', '..', '..', 'assets
 app.use(staticsRouter());
 app.use(apiRouter());
 
-app.use('/tink_api', (req, res, next) => {
+/*app.use('/tink_api', (req, res, next) => {
   server.TinkAPI.main(req, res);
-});
+});*/
 
 app.use(pagesRouter());
 

@@ -1,0 +1,8 @@
+-D material-ui=0.14.7
+# @install: lix --silent download "git:git@gitlab.com:k-labz/haxe-oss/haxe-material-ui.git#edaf03a01861b00b3294d243330ae49102c7c822" into material-ui/0.14.7/git/edaf03a01861b00b3294d243330ae49102c7c822
+-lib css-types
+-lib js-object
+-lib react-types
+-lib react-event-listener
+-lib react-transition-group
+-cp ${HAXE_LIBCACHE}/material-ui/0.14.7/git/edaf03a01861b00b3294d243330ae49102c7c822/src
