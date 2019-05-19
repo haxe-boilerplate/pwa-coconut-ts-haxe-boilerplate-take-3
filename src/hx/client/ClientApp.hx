@@ -2,16 +2,15 @@ package client;
 
 import js.Browser.*;
 import coconut.Ui.hxx;
-import todomvc.ui.TodoListView;
+import client.ui.ThingsView;
 
 class ClientApp {
   static function main() {
     
-    var things = [new data.Thing()];
+    var things = [new client.data.Thing()];
 
     coconut.ui.Renderer.mount(
       cast document.body.appendChild(document.createDivElement()),
-      hxx('<ThingsView things=${things}/>')
-    );
+      hxx('<ThingsView things=${things}/>'));
   }
 }
