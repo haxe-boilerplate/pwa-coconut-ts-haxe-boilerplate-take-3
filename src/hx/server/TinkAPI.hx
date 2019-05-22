@@ -38,7 +38,7 @@ class Root {
 
 @:expose
 class TinkAPI {
-    static var main = {
+    public static var main = {
         var router = new Router<Root>(new Root());
         NodeContainer.toNodeHandler(req -> router.route(Context.ofRequest(req)).recover(OutgoingResponse.reportError));
     }

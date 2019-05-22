@@ -10,6 +10,7 @@ import * as io from 'socket.io';
 import { isObject } from 'util';
 import * as http from 'http';
 import { Server } from 'net';
+import { json } from 'body-parser';
 
 console.log(`The App version is ${getVersion()} nice!`);
 
@@ -21,9 +22,11 @@ app.use('/assets', express.static(path.join(__dirname, '..', '..', '..', 'assets
 app.use(staticsRouter());
 app.use(apiRouter());
 
-/*app.use('/tink_api', (req, res, next) => {
-  server.TinkAPI.main(req, res);
-});*/
+app.use('/tink_api', (next) => {
+  bar(req);
+});
+
+function bar(foo: http.IncomingMessage) { return 'f'; }
 
 app.use(pagesRouter());
 

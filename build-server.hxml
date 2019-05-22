@@ -1,11 +1,11 @@
 -cp src/hx
--lib hxtsdgen
+-lib js-kit
 -lib hxnodejs
 -lib tink_web
 -lib tink_http
 -lib tink_await
--js src/ts/server/hx.js
+-js src/ts/server/server.js
+-main server.Main
 -D nodejs
 -D no-deprecation-warnings
---macro include('server')
 -dce full

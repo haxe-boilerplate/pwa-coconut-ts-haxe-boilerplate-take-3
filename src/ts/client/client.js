@@ -353,16 +353,20 @@ client_ui_ThingsView.prototype = $extend(coconut_ui_View.prototype,{
 		var __r = [];
 		var __r1 = [];
 		var __r2 = [];
-		__r2.push("Foo");
-		var __ret = { variant : "outlined"};
-		var children = ["button",__ret].concat(__r2);
-		__r1.push(React.createElement.apply(React,children));
 		var __r3 = [];
-		__r3.push(tink_state__$Observable_Observable_$Impl_$.get_value(this.__slots.thing).foo);
+		__r3.push("Foo");
+		var __ret = { variant : "outlined"};
+		var children = [react__$ReactType_ReactType_$Impl_$.fromComp(mui_core_Button),__ret].concat(__r3);
+		__r2.push(React.createElement.apply(React,children));
+		var __r4 = [];
+		__r4.push(tink_state__$Observable_Observable_$Impl_$.get_value(this.__slots.thing).foo);
 		var __ret1 = { };
-		__r1.push(coconut_react_Html.h("h1",__ret1,__r3));
-		var __ret2 = { };
-		__r.push(coconut_react_Html.h("div",__ret2,__r1));
+		__r2.push(coconut_react_Html.h("h1",__ret1,__r4));
+		var __ret2 = { container : true, direction : "row", justify : "center", alignItems : "center"};
+		var children1 = [react__$ReactType_ReactType_$Impl_$.fromComp(mui_core_Grid),__ret2].concat(__r2);
+		__r1.push(React.createElement.apply(React,children1));
+		var __ret3 = { };
+		__r.push(coconut_react_Html.h("div",__ret3,__r1));
 		return __r[0];
 	}
 	,get_thing: function() {
@@ -1016,9 +1020,17 @@ js_Boot.__string_rec = function(o,s) {
 var mui_core__$Button_Button_$Impl_$ = function() { };
 mui_core__$Button_Button_$Impl_$.__name__ = true;
 mui_core__$Button_Button_$Impl_$.fromHxx = function(props,children) {
-	var tmp = ["button",props].concat(children);
+	var tmp = [react__$ReactType_ReactType_$Impl_$.fromComp(mui_core_Button),props].concat(children);
 	return React.createElement.apply(React,tmp);
 };
+var mui_core_Button = require("@material-ui/core").Button;
+var mui_core__$Grid_Grid_$Impl_$ = function() { };
+mui_core__$Grid_Grid_$Impl_$.__name__ = true;
+mui_core__$Grid_Grid_$Impl_$.fromHxx = function(props,children) {
+	var tmp = [react__$ReactType_ReactType_$Impl_$.fromComp(mui_core_Grid),props].concat(children);
+	return React.createElement.apply(React,tmp);
+};
+var mui_core_Grid = require("@material-ui/core").Grid;
 var pick_First = function() { };
 pick_First.__name__ = true;
 var React_Fragment = require("react").Fragment;
