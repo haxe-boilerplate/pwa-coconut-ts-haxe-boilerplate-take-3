@@ -11,6 +11,7 @@ import { isObject } from 'util';
 import * as http from 'http';
 import { Server } from 'net';
 import { json } from 'body-parser';
+import { runInNewContext } from 'vm';
 
 console.log(`The App version is ${getVersion()} nice!`);
 
@@ -22,10 +23,7 @@ app.use('/assets', express.static(path.join(__dirname, '..', '..', '..', 'assets
 app.use(staticsRouter());
 app.use(apiRouter());
 
-app.use('/tink_api', (next) => {
-  bar(req);
-});
-
+// app.use('foo', (a, b, c, dataz) => { });
 function bar(foo: http.IncomingMessage) { return 'f'; }
 
 app.use(pagesRouter());

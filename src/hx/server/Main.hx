@@ -18,9 +18,10 @@ class Main {
     //app.use(staticsRouter());
     app.use(Routes.apiRouter());
 
-    app.get('/foo', function(req, res):Void {
-      $type(req);
-      $type(res);
+    app.get('/foo', function(a, b, c):Void {
+      $type(a);
+      $type(b);
+      $type(c);
     });
 
     app.listen(Config.SERVER_PORT);
