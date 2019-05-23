@@ -15,6 +15,7 @@
     "build-client": "cross-env NODE_ENV=production webpack -p",
     "dev-client": "webpack-dev-server -w --debug --output-path-info",
     "dev-client:hot": "webpack-dev-server -w --hot",
+    "build-server-for-debugging": "haxe build-server.hxml && yarn build-server",
     "build-server": "tsc -p ./src/ts/server",
     "dev-server": "concurrently \"nodemon -e hx --watch vendor --watch src/hx --exec \\\"haxe build-client.hxml && haxe build-server.hxml\\\"\" \"nodemon -e ts,js --watch src/ts/server --exec \\\"tsc --p ./src/ts/server/tsconfig.json && node index.js\\\"\"",
     "dev": "npm run clean && concurrently --prefix \"[{name}]\" --names \"SERVER,CLIENT\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run dev-server\" \"npm run dev-client\"",

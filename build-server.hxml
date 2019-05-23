@@ -4,8 +4,11 @@
 -lib tink_web
 -lib tink_http
 -lib tink_await
--js src/ts/server/server.js
+#-js src/ts/server/server.js
+-js dist/server-root/server/server.js
 -main server.Main
 -D nodejs
+-debug
+-D source-map-content
 -D no-deprecation-warnings
--dce full
+#-dce full

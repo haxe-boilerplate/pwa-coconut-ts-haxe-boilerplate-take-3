@@ -11,19 +11,22 @@ class Main {
 
 
   public static function main() {
-    //app.set('view engine', 'ejs');
+    var path = js.Lib.require('path');
 
-    app.use('/assets', new Static(untyped path.join(__dirname, '..', '..', '..', 'assets')));
+    app.set('view engine', 'ejs');
+    app.use('/assets', new Static(path.join(untyped __dirname, '..', '..', '..', 'assets')));
 
     //app.use(staticsRouter());
     app.use(Routes.apiRouter());
 
-    app.get('/foo', function(a, b, c):Void {
-      $type(a);
-      $type(b);
-      $type(c);
-    });
+    app.use(Routes.staticRouter());
+    app.use(Routes.pagesRouter());
 
-    app.listen(Config.SERVER_PORT);
+    /*app.use('/tink_api', (a: Request, b: js.node.http.ServerResponse) -> {
+      TinkAPI.main(a, b);
+    });*/
+
+    trace('fooooo');
+    app.listen(Config.SERVER_PORT, () -> { trace('LISTENING ON PORT ${Config.SERVER_PORT}'); });
   }
 }

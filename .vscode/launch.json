@@ -4,6 +4,10 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+
+
+
+
     
     {
       "name": "Macro Debugger",
@@ -15,8 +19,9 @@
       "type": "node",
       "request": "launch",
       "name": "Server",
-      "program": "${workspaceFolder}/src/ts/server/main.ts",
-      "preLaunchTask": "npm: build-server",
+//      "program": "${workspaceFolder}/src/ts/server/main.ts",
+      "program": "${workspaceFolder}/dist/server-root/server/server.js",
+      "preLaunchTask": "npm: build-server-for-debugging",
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ]
