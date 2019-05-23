@@ -1,12 +1,13 @@
 package server;
 
+import tink.core.Promise;
 import js.npm.express.Static;
 import js.npm.express.Response;
 import js.npm.express.Request;
 import js.npm.express.Router;
 import tink.core.Future;
 
-@await class Routes {
+@:await class Routes {
   public static function apiRouter() {
     var bodyParser = js.Lib.require('body-parser');
     var db: Dynamic = js.Lib.require('./db');
@@ -31,12 +32,12 @@ import tink.core.Future;
     return router;
   }
 
-  public static function pagesRouter() {
+  @await public static function pagesRouter() {
     //TODO Macro-wrapped require that checks that the js / ts exists?
     var router = new Router();
     var getManifest = (js.Lib.require('./routes/manifest-manager') : {getManifest: () -> js.Promise<String>}).getManifest;
 
-    router.get('/**', @async (_, res: Response) -> {
+    router.get('/**', @await (_, res: Response) -> {
       var manifest = @await Future.ofJsPromise(getManifest());
       res.render('page.ejs', {manifest: manifest});
     });
