@@ -1,5 +1,5 @@
 -D coconut.data=0.8.1
-# @install: lix --silent download "git:git@github.com:MVCoconut/coconut.data.git#337187936723848db5fa857eafaac866c36bcd34" into coconut.data/0.8.1/git/337187936723848db5fa857eafaac866c36bcd34
+# @install: lix --silent download "git:git@github.com:MVCoconut/coconut.data.git#11c9f4e69050ab0df2d03dabddf81fb316bf122e" into coconut.data/0.8.1/git/337187936723848db5fa857eafaac866c36bcd34
 -lib tink_state
 -lib tink_lang
 -lib tink_pure

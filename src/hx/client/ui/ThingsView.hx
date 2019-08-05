@@ -5,7 +5,7 @@ import js.html.*;
 import client.data.Thing;
 import coconut.ui.View;
 import mui.core.Button;
-
+import client.ui.TestReactUI;
 
 
 class ThingsView extends View {
@@ -23,6 +23,7 @@ class ThingsView extends View {
     <Button variant={Outlined}>Foo</Button>
     <h1>{thing.foo}</h1>
     </Grid>
+    <TestReactUI/>
     </div>;
   }
 }

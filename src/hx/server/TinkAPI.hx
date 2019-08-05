@@ -36,7 +36,6 @@ class Root {
         }
 }
 
-@:expose
 class TinkAPI {
     public static var main = {
         var router = new Router<Root>(new Root());

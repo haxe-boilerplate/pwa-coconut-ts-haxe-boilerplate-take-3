@@ -1,6 +1,8 @@
 -cp src/hx
 -lib material-ui
+-lib react
 -lib coconut.react-dom
+-lib coconut.data
 -lib hxnodejs
 -lib tink_web
 -lib tink_http
